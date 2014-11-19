@@ -2,6 +2,7 @@
 #Rock Paper Scissors implementation of Player class
 #A gambit is a predetermined RPS strategy
 #AI uses 1 of 8 famous gambits randomly for a match
+#Edited by Joseph Pannizzo
 import random
 
 class RpsPlayer():
