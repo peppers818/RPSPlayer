@@ -9,71 +9,74 @@ class RpsPlayer():
     def __init__(self):
         self.move = random.randint(1,8)  # choose random gambit
         self.currentMove = 0
+        self.history = ""
         
     #Provides AI for making a move, returns move as a string
-    #move is either Rock, Paper, or Scissors
+    #move is either Rock(0), Paper(1), or Scissors(2)
     def play(self):
         if self.move == 1: #Denoument gambit
             self.currentMove += 1
             if self.currentMove == 1:
-                return "Rock"
+                return "0"
             elif self.currentMove == 2:
-                return "Scissors"
+                return "2"
             else:
-                return "Paper"   
+                return "1"   
         elif self.move == 2: #Bureaucrat gambit
             self.currentMove += 1
             if self.currentMove == 1:
-                return "Paper"
+                return "1"
             elif self.currentMove == 2:
-                return "Paper"
+                return "1"
             else:
-                return "Paper" 
+                return "1" 
         elif self.move == 3: #Crescendo gambit
             self.currentMove += 1
             if self.currentMove == 1:
-                return "Paper"
+                return "1"
             elif self.currentMove == 2:
-                return "Scissors"
+                return "2"
             else:
-                return "Rock" 
+                return "0" 
         elif self.move == 4: #Avalanche gambit
             self.currentMove += 1
             if self.currentMove == 1:
-                return "Rock"
+                return "0"
             elif self.currentMove == 2:
-                return "Rock"
+                return "0"
             else:
-                return "Rock" 
+                return "0" 
         elif self.move == 5: #Fistfull o' Dollars gambit
             self.currentMove += 1
             if self.currentMove == 1:
-                return "Rock"
+                return "0"
             elif self.currentMove == 2:
-                return "Paper"
+                return "1"
             else:
-                return "Paper" 
+                return "1" 
         elif self.move == 6: #Paper Dolls gambit
             self.currentMove += 1
             if self.currentMove == 1:
-                return "Paper"
+                return "1"
             elif self.currentMove == 2:
-                return "Scissors"
+                return "2"
             else:
-                return "Scissors" 
+                return "2" 
         elif self.move == 7: #Scissor Sandwich gambit
             self.currentMove += 1
             if self.currentMove == 1:
-                return "Paper"
+                return "1"
             elif self.currentMove == 2:
-                return "Scissors"
+                return "2"
             else:
-                return "Paper" 
+                return "1" 
         else: #move == 8, Toolbox gambit
             self.currentMove += 1
             if self.currentMove == 1:
-                return "Scissors"
+                return "2"
             elif self.currentMove == 2:
-                return "Scissors"
+                return "2"
             else:
-                return "Scissors"
+                return "2"
+    def notify(self,message):
+        self.history = message  #We don't use history for our strategy
