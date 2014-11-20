@@ -13,6 +13,10 @@ class RpsPlayer():
     #Provides AI for making a move, returns move as a string
     #move is either Rock(0), Paper(1), or Scissors(2)
     def play(self):
+        if self.currentMove > 3: # if match goes more than 3 rounds currentMove resets to 1
+            self.currentMove = 1
+            self.move = random.randint(1,8) # picks a new gambit
+            
         if self.move == 1: #Denoument gambit
             self.currentMove += 1
             if self.currentMove == 1:
@@ -79,6 +83,10 @@ class RpsPlayer():
                 return "2" 
 
 r = RpsPlayer()
+print(r.play())
+print(r.play())
+print(r.play())
+print("\n")
 print(r.play())
 print(r.play())
 print(r.play())
