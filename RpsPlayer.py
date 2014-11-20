@@ -1,13 +1,13 @@
-#Samantha Holloway 11/2014
+#Samantha Holloway, Joseph Pannizzo 11/2014
 #Rock Paper Scissors implementation of Player class
 #A gambit is a predetermined RPS strategy
 #AI uses 1 of 8 famous gambits randomly for a match
-#Edited by Joseph Pannizzo
+
 import random
 
 class RpsPlayer():
     def __init__(self):
-        self.move = random.randint(1,8)# choose random gambit
+        self.move = random.randint(1,8)  # choose random gambit
         self.currentMove = 0
         
     #Provides AI for making a move, returns move as a string
@@ -76,12 +76,4 @@ class RpsPlayer():
             elif self.currentMove == 2:
                 return "Scissors"
             else:
-                return "Scissors" 
-    
-
-
-
-r = RpsPlayer()
-print(r.play())
-print(r.play())
-print(r.play())
+                return "Scissors"
